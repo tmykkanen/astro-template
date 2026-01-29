@@ -7,7 +7,12 @@
     "build": "astro build",
     "dev": "astro dev",
     "knip": "knip",
+    "prepare": "husky",
     "preview": "astro preview"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --fix",
+    "*": "prettier --ignore-unknown --write"
   },
   "dependencies": {
     "@astrojs/netlify": "^6.6.4",
@@ -37,7 +42,9 @@
     "eslint-plugin-astro": "^1.5.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
+    "husky": "^9.1.7",
     "knip": "^5.82.1",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-packagejson": "^3.0.0",
